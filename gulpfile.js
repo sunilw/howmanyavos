@@ -12,13 +12,10 @@ var reload      = browserSync.reload;
 gulp.task('watch', function () {
     gulp.watch('./src/sass/**.scss', ['sass']);
     gulp.watch('./src/js/**.js', ['scripts']);
-
-    gulp.watch("*.html").on("change", reload);
-    
+    gulp.watch("*.html").on("change", reload);    
 });
 
 gulp.task( 'sass', function() {
-
     return gulp.src('./src/sass/**.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -32,7 +29,7 @@ gulp.task('scripts', function() {
 	'./src/js/jquery-custom.js',
 	'./src/js/jquery-waypoints',
 	'./src/js/modernizr-custom.js',
-	'./src/js/main.js' ])
+	'./src/js/avos.js' ])
         .pipe(concat('avos.js'))
         .pipe(gulp.dest('./js'))
         .pipe(uglify())
