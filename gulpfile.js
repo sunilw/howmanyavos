@@ -38,9 +38,8 @@ gulp.task( 'sass', function() {
 
 gulp.task('scripts', function() {
     return gulp.src([
-        './src/js/jquery-custom.js',
-        './src/js/jquery-waypoints',
-        './src/js/modernizr-custom.js',
+        './src/js/awesomplete.js',
+	'./src/js/house-values.js',
         './src/js/avos.js' ])
         .pipe(concat('avos.js'))
         .pipe(gulp.dest('./js'))
