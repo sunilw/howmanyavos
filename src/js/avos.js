@@ -23,8 +23,7 @@ jQuery(document).ready(function() {
 
 	electorateSelector.on("focus", function() {
 	    console.log("haz focus");
-	}  ;
-	
+	} ) ;	
     }
 
     
