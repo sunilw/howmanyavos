@@ -1,5 +1,6 @@
 var gulp = require('gulp') ;
 var sass = require('gulp-sass') ;
+var minifyHTML = require('gulp-minify-html') ;
 var watch = require('gulp-watch') ;
 var sourcemaps = require('gulp-sourcemaps') ;
 var browserSync = require('browser-sync');
@@ -9,10 +10,21 @@ var uglify = require('gulp-uglify');
 var combiner = require('stream-combiner2');
 var reload      = browserSync.reload;
 
+gulp.task('minify-html', function() {    
+    var opts = {
+	empty: true,
+	spare:true
+    };
+    gulp.src('./src/html/*.html')
+        .pipe(minifyHTML(opts))
+        .pipe(gulp.dest('./'))
+});
+
 gulp.task('watch', function () {
+    gulp.watch('./src/html/**.html', ['minify-html']);
     gulp.watch('./src/sass/**.scss', ['sass']);
     gulp.watch('./src/js/**.js', ['scripts']);
-    gulp.watch("*.html").on("change", reload);    
+    gulp.watch("*.html").on("change", reload);
 });
 
 gulp.task( 'sass', function() {
@@ -21,15 +33,15 @@ gulp.task( 'sass', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./css'))
-        .pipe(browserSync.stream()) ;    
+        .pipe(browserSync.stream()) ;
 }) ;
 
 gulp.task('scripts', function() {
     return gulp.src([
-	'./src/js/jquery-custom.js',
-	'./src/js/jquery-waypoints',
-	'./src/js/modernizr-custom.js',
-	'./src/js/avos.js' ])
+        './src/js/jquery-custom.js',
+        './src/js/jquery-waypoints',
+        './src/js/modernizr-custom.js',
+        './src/js/avos.js' ])
         .pipe(concat('avos.js'))
         .pipe(gulp.dest('./js'))
         .pipe(uglify())
@@ -40,11 +52,11 @@ gulp.task('scripts', function() {
 gulp.task('serve', function() {
     browserSync({
         proxy : 'http://howmanyavos.dev',
-	open:   false 
+        open:   false
     });
 
     gulp.watch("./js/**").on('change', browserSync.reload);
-    
+
 });
 
 gulp.task('default', ['sass', 'scripts','watch', 'serve']) ;
