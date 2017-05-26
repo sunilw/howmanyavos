@@ -38,6 +38,7 @@ gulp.task( 'sass', function() {
 
 gulp.task('scripts', function() {
     return gulp.src([
+	'./src/js/jquery.js',
         './src/js/awesomplete.js',
 	'./src/js/house-values.js',
         './src/js/avos.js' ])

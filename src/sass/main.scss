@@ -1,0 +1,30 @@
+html {
+    height: 100% ;
+}
+
+body {
+    display: flex ;
+    min-height: 100vh ;
+    flex-direction: column ;    
+}
+
+.page-wrap {
+    flex:     1 ;
+}
+
+#global-header {
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;
+}
+
+#global-footer {
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;    
+}
+
+.row {
+    position: relative ;
+    padding-left: 6% ;
+    padding-right: 6% ;
+}
+
