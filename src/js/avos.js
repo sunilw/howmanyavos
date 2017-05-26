@@ -15,17 +15,9 @@ jQuery(document).ready(function() {
      * Add the datalist
      */
     var electorateSelector = document.getElementById("electorateSelector");
-    var awesome =  new Awesomplete(  input  );
+    var awesome =  new Awesomplete(  electorateSelector  );
 
     awesome.list = electorateList ;
-
-    function showStory() {
-
-	electorateSelector.on("focus", function() {
-	    console.log("haz focus");
-	} ) ;	
-    }
-
     
     
 });
