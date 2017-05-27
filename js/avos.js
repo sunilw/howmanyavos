@@ -10834,7 +10834,7 @@ jQuery(document).ready(function() {
     var avocadosTotal ;
     var avocadosPerMonth ;
     var avocadosPerWeek ;
-    
+    var breakfastCost = "14.99" ;
 
     /**
      * Get the values that we need
@@ -10842,7 +10842,10 @@ jQuery(document).ready(function() {
     var valueElectorate ;
     var valueHousePrice ;
     var valueAvocado ;
-
+    var valueLostBreakfasts ;
+    /*
+     *  update the values
+     */
     function getValues() {
 	valueAvocado = $("#avoPrice").val() ;
 	electorateName =  $("#electorateSelector") .val() ;
@@ -10864,13 +10867,27 @@ jQuery(document).ready(function() {
 	/*
 	 * How many avos would we have to spare per year?
 	 */
-	avocadosTotal  =  Math.round( valueHousePrice / valueAvocado) ;	
+	avocadosTotal  =  Math.round( valueHousePrice / valueAvocado) ;
+
+	/*
+	 * How many avos would we have to spare per month?
+	 */
+	avocadosPerMonth = Math.round(avocadosTotal / 12) ;
+	avocadosPerWeek  = Math.round(avocadosTotal / 52) ;
+
+	/*
+	 * How many breakfast would we have to sacrifice?
+	 */
+	var brekky = breakfastCost ;
+	lostBreakfasts = Math.round(valueHousePrice / brekky) ;
     }
 
 
     function updateStoryDetails () {
-	// console.log(avocadosTotal);
 	$(".avo-total-avos").text(avocadosTotal) ;
+	$(".avo-months").text(avocadosPerMonth) ;
+	$(".avo-week").text(avocadosPerWeek) ;
+	$(".avo-breakfast-freq-week").text(lostBreakfasts) ;
     } ;
 
     function showStory() {
