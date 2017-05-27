@@ -3,12 +3,12 @@
 jQuery(document).ready(function() {
 
     //   make our datalist
-    window.electorateList = [] ;
+    window.electorateList = Object.keys(window.houseData) ;
 
     $(window.houseData).each(function() {
         var electorate = this.Electorate ;
         str = electorate  ;
-        window.electorateList.push(str) ;
+        // window.electorateList.push(str) ;
     }) ;
 
     /**
@@ -21,9 +21,11 @@ jQuery(document).ready(function() {
     awesome.list = electorateList ;
     
     function showStory() {
-        $("#electorateSelector").on("focus", function() { 
-            console.log("haz focus");
-        } ) ;
+        console.log("got to showstory");	
     } ;
-		       
+
+    $("button.calculate").on("click", function(){
+	showStory() ;
+    });
+    
 });
