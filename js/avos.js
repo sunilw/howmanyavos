@@ -10891,8 +10891,12 @@ jQuery(document).ready(function() {
     } ;
 
     function showStory() {
-        console.log("got to showstory");
-
+	var storyContainer = $(".story-container") ;
+	if (storyContainer.hasClass("hidden")) {
+	    storyContainer.fadeIn() ;
+	    storyContainer.removeClass("hidden") ;
+	}
+	
     } ;
 
     $("button.calculate").on("click", function(){
