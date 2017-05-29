@@ -10811,7 +10811,7 @@ window.houseData = {
 /* main for howmanyavos */
 
 jQuery(document).ready(function() {
-
+   
     //   make our datalist
     window.electorateList = Object.keys(window.houseData) ;
 
@@ -10862,7 +10862,7 @@ jQuery(document).ready(function() {
 	price = parseFloat(price.replace( /,/g,'.' )) ;
 	valueHousePrice = price ;
 	
-
+	
 	valueAvocado = parseFloat(valueAvocado.replace( /,/g,'.' )) ;
 	
         valueElectorate = document.getElementById("electorateSelector") ;

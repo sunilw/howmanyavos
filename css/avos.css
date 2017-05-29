@@ -157,6 +157,9 @@ span.error {
   border-radius: 3px;
   background-color: #ff8ac1; }
 
+.story-container {
+  display: none; }
+
 .awesomplete [hidden] {
   display: none; }
 
