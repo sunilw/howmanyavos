@@ -1,0 +1,16 @@
+/* styles for page header*/
+#global-header {
+  position: relative;
+  background-color: #ececec;
+  margin-bottom: 3rem; }
+  #global-header .logo-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 200px; }
+    #global-header .logo-container img {
+      display: block;
+      max-width: 100%; }
+
+/*# sourceMappingURL=maps/header.css.map */

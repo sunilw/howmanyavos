@@ -105,6 +105,21 @@ p {
 h1 {
   font-size: 22px; }
 
+/* styles for page header*/
+#global-header {
+  position: relative;
+  background-color: #ececec;
+  margin-bottom: 3rem; }
+  #global-header .logo-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 200px; }
+    #global-header .logo-container img {
+      display: block;
+      max-width: 100%; }
+
 /* main contains the main bulk of our styles */
 html {
   height: 100%; }
@@ -123,7 +138,8 @@ body {
 
 #global-footer {
   padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  background-color: #ececec; }
 
 span.error.hidden {
   display: none; }
