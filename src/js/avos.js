@@ -51,20 +51,12 @@ jQuery(document).ready(function() {
 	// clean string: remove commas
 	price = parseFloat(price.replace( /,/g,'.' )) ;
 	valueHousePrice = price ;
-	
-	
+		
 	valueAvocado = parseFloat(valueAvocado.replace( /,/g,'.' )) ;
 	
         valueElectorate = document.getElementById("electorateSelector") ;
         valueElectorate = document.getElementById("avoPrice") ;
-
-	/*
-	 * About to run calculations. Inspect figures
-	 */
-
-	console.log("About to run numbers...");
-	console.log("Avo price: ");
-	console.log(price);
+	
 	
         /*
          * How many avos would we have to spare per year?
