@@ -17,12 +17,20 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem; }
 
-.hidden {
+span.error.hidden {
   display: none; }
 
 .row {
   position: relative;
   padding-left: 6%;
   padding-right: 6%; }
+
+span.error {
+  display: inline;
+  margin-top: 14px;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  background-color: #ff8ac1; }
 
 /*# sourceMappingURL=maps/main.css.map */

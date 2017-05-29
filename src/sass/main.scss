@@ -22,7 +22,7 @@ body {
     padding-bottom: 2rem ;    
 }
 
-.hidden {
+span.error.hidden {
     display: none ;
 }
 
@@ -32,3 +32,11 @@ body {
     padding-right: 6% ;
 }
 
+span.error {
+    display: inline ;
+    margin-top: 14px ;    
+    padding: 8px ;
+    font-size: 14px ;
+    border-radius: 3px ;
+    background-color: #ff8ac1;
+}
