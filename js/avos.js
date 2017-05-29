@@ -10847,7 +10847,7 @@ jQuery(document).ready(function() {
      *  update the values
      */
     function getValues() {
-// <<<<<<< Updated upstream
+	
 	valueAvocado = $("#avoPrice").val() ;
 	electorateName =  $("#electorateSelector") .val() ;
 
@@ -10859,20 +10859,11 @@ jQuery(document).ready(function() {
 	}
 	avocadosTotal = price ;
 	// clean string: remove commas
-	price = parseFloat(price.replace( /,/g,'' )) ;	
+	price = parseFloat(price.replace( /,/g,'.' )) ;
 	valueHousePrice = price ;
+	
 
-// =======
-        valueAvocado = $("#avoPrice").val() ;	
-        electorateName =  $("#electorateSelector") .val() ;
-        var price = window.houseData[electorateName]["House Price"] ;
-
-        // clean house price: remove $
-        while(price.charAt(0) === '$') {
-            price = price.substr(1);
-        }
-        avocadosTotal = price ;
-// >>>>>>> Stashed changes
+	valueAvocado = parseFloat(valueAvocado.replace( /,/g,'.' )) ;
 	
         valueElectorate = document.getElementById("electorateSelector") ;
         valueElectorate = document.getElementById("avoPrice") ;

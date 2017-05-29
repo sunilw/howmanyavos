@@ -49,9 +49,11 @@ jQuery(document).ready(function() {
 	}
 	avocadosTotal = price ;
 	// clean string: remove commas
-	price = parseFloat(price.replace( /,/g,'' )) ;	
+	price = parseFloat(price.replace( /,/g,'.' )) ;
 	valueHousePrice = price ;
+	
 
+	valueAvocado = parseFloat(valueAvocado.replace( /,/g,'.' )) ;
 	
         valueElectorate = document.getElementById("electorateSelector") ;
         valueElectorate = document.getElementById("avoPrice") ;
