@@ -4,14 +4,32 @@ html {
 body {
   display: flex;
   min-height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  background: linear-gradient(to right, #c9c8fd, #bbefdb, #c9c8fd, #bbefdb);
+  background-image: url("/img/grit-green.jpg"); }
 
 .page-wrap {
-  flex: 1; }
+  flex: 1;
+  margin-bottom: 3erm; }
+
+main {
+  position: relative;
+  margin-top: 2rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 98%;
+  max-width: 980px;
+  background-color: #fff;
+  padding-bottom: 2rem; }
 
 #global-header {
-  padding-top: 2rem;
-  padding-bottom: 2rem; }
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  #global-header h1 {
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-bottom: 0; }
 
 #global-footer {
   padding-top: 2rem;
