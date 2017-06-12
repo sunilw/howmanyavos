@@ -1,0 +1,15 @@
+input[type=text] {
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #52e01a;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px; }
+
+button {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  padding: 8px 12px; }
+
+/*# sourceMappingURL=maps/forms.css.map */

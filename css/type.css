@@ -8,8 +8,9 @@ h1, h2, h3, h4, h5 {
 p, ul, ol, li, span {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  color: #1f1f1f; }
+  font-size: 22px;
+  color: #1f1f1f;
+  line-height: 1.4; }
 
 p {
   padding-bottom: 1rem; }
